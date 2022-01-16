@@ -48,20 +48,20 @@ RUN set -e; \
     chmod -v 0755 /docker-entrypoint.sh; \
     chown -v root:root /docker-entrypoint.sh
 
-COPY php-fpm.conf /etc/php/7.4/fpm/php-fpm.conf
+COPY php-fpm.conf /etc/php/8.0/fpm/php-fpm.conf
 RUN set -e; \
-    chmod -v 0644 /etc/php/7.4/fpm/php-fpm.conf; \
-    chown -v root:root /etc/php/7.4/fpm/php-fpm.conf
+    chmod -v 0644 /etc/php/8.0/fpm/php-fpm.conf; \
+    chown -v root:root /etc/php/8.0/fpm/php-fpm.conf
 
-COPY www.conf /etc/php/7.4/fpm/pool.d/www.conf
+COPY www.conf /etc/php/8.0/fpm/pool.d/www.conf
 RUN set -e; \
-    chmod -v 0644 /etc/php/7.4/fpm/pool.d/www.conf; \
-    chown -v root:root /etc/php/7.4/fpm/pool.d/www.conf
+    chmod -v 0644 /etc/php/8.0/fpm/pool.d/www.conf; \
+    chown -v root:root /etc/php/8.0/fpm/pool.d/www.conf
 
-COPY php.ini /etc/php/7.4/fpm/php.ini
+COPY php.ini /etc/php/8.0/fpm/php.ini
 RUN set -e; \
-    chmod -v 0644 /etc/php/7.4/fpm/php.ini; \
-    chown -v root:root /etc/php/7.4/fpm/php.ini
+    chmod -v 0644 /etc/php/8.0/fpm/php.ini; \
+    chown -v root:root /etc/php/8.0/fpm/php.ini
 
 ENTRYPOINT ["tini", "--"]
 CMD ["/docker-entrypoint.sh"]

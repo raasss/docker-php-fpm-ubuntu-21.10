@@ -65,6 +65,6 @@ To change the documentation, please contribute a [pull request](https://github.c
 | Docker Library Official Images CI Status (released changes) |
 |:-:|
 | [![latest](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/latest.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/latest.yml) |
-| [![7.4.3-4ubuntu1](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/7.4.3-4ubuntu1.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/7.4.3-4ubuntu1.yml) |
-| [![7.4.3-4ubuntu2.7](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/7.4.3-4ubuntu2.7.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/7.4.3-4ubuntu2.7.yml) |
-| [![7.4.3-4ubuntu2.8](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/7.4.3-4ubuntu2.8.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/7.4.3-4ubuntu2.8.yml) |
+| [![8.0.3-4ubuntu1](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu1.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu1.yml) |
+| [![8.0.3-4ubuntu2.7](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu2.7.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu2.7.yml) |
+| [![8.0.3-4ubuntu2.8](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu2.8.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu2.8.yml) |

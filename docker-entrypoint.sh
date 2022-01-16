@@ -9,11 +9,11 @@ DOCKER_RUN_AS_UID=$(stat -c '%u' /var/www/html)
 
 if [ "${DOCKER_RUN_AS_GID}" != "0" ]; then
   groupadd --non-unique -g ${DOCKER_RUN_AS_GID} runasgroup || true
-  crudini --verbose --set /etc/php/7.4/fpm/pool.d/www.conf www group "${DOCKER_RUN_AS_GID}"
+  crudini --verbose --set /etc/php/8.0/fpm/pool.d/www.conf www group "${DOCKER_RUN_AS_GID}"
 fi
 if [ "${DOCKER_RUN_AS_UID}" != "0" ]; then
   useradd --non-unique -c "User running container on docker host" -d /home/runasuser -g runasgroup -m -N -s /bin/bash -u ${DOCKER_RUN_AS_UID} runasuser || true
-  crudini --verbose --set /etc/php/7.4/fpm/pool.d/www.conf www user "${DOCKER_RUN_AS_UID}"
+  crudini --verbose --set /etc/php/8.0/fpm/pool.d/www.conf www user "${DOCKER_RUN_AS_UID}"
 fi
 
 for ENVVAR in $(env | grep -E '^PHP_FPM_CONF_.+')
@@ -21,10 +21,10 @@ do
   ENVVAR_SECTION=$(echo ${ENVVAR} | cut -d '=' -f2 | cut -d ':' -f 1)
   ENVVAR_KEY=$(echo ${ENVVAR} | cut -d '=' -f2 | cut -d ':' -f 2)
   ENVVAR_VALUE=$(echo ${ENVVAR} | cut -d '=' -f2 | cut -d ':' -f 3-)
-  crudini --verbose --set "/etc/php/7.4/fpm/php-fpm.conf" "${ENVVAR_SECTION}" "${ENVVAR_KEY}" "${ENVVAR_VALUE}"
+  crudini --verbose --set "/etc/php/8.0/fpm/php-fpm.conf" "${ENVVAR_SECTION}" "${ENVVAR_KEY}" "${ENVVAR_VALUE}"
 done
 
-PHP_INI_CONFIGURATION_FILE="$(php-fpm7.4 -i | grep '^Loaded Configuration File' | awk '{print $5}')"
+PHP_INI_CONFIGURATION_FILE="$(php-fpm8.0 -i | grep '^Loaded Configuration File' | awk '{print $5}')"
 for ENVVAR in $(env | grep -E '^PHP_FPM_INI_.+')
 do
   ENVVAR_SECTION=$(echo ${ENVVAR} | cut -d '=' -f2 | cut -d ':' -f 1)
@@ -38,10 +38,10 @@ do
   ENVVAR_SECTION=$(echo ${ENVVAR} | cut -d '=' -f2 | cut -d ':' -f 1)
   ENVVAR_KEY=$(echo ${ENVVAR} | cut -d '=' -f2 | cut -d ':' -f 2)
   ENVVAR_VALUE=$(echo ${ENVVAR} | cut -d '=' -f2 | cut -d ':' -f 3-)
-  crudini --verbose --set "/etc/php/7.4/fpm/pool.d/www.conf" "${ENVVAR_SECTION}" "${ENVVAR_KEY}" "${ENVVAR_VALUE}"
+  crudini --verbose --set "/etc/php/8.0/fpm/pool.d/www.conf" "${ENVVAR_SECTION}" "${ENVVAR_KEY}" "${ENVVAR_VALUE}"
 done
 
-php-fpm7.4 --test
+php-fpm8.0 --test
 
-exec /usr/sbin/php-fpm7.4 -R --nodaemonize --fpm-config /etc/php/7.4/fpm/php-fpm.conf
+exec /usr/sbin/php-fpm8.0 -R --nodaemonize --fpm-config /etc/php/8.0/fpm/php-fpm.conf
 

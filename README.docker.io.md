@@ -6,9 +6,9 @@
 # Supported tags and respective `Dockerfile` links
 
 -	[`0.1.7`, `latest`](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/blob/0.1.7/Dockerfile)
--	[`7.4.3-4ubuntu2.8-0.0.7`, `7.4.3-4ubuntu2.8`](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/blob/7.4.3-4ubuntu2.8/Dockerfile)
--	[`7.4.3-4ubuntu1-0.0.15`, `7.4.3-4ubuntu1`](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/blob/7.4.3-4ubuntu1-0.0.15/Dockerfile)
--	[`7.4.3-4ubuntu2.7-0.0.7`, `7.4.3-4ubuntu2.7`](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/blob/7.4.3-4ubuntu2.7-0.0.7/Dockerfile)
+-	[`8.0.3-4ubuntu2.8-0.0.7`, `8.0.3-4ubuntu2.8`](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/blob/8.0.3-4ubuntu2.8/Dockerfile)
+-	[`8.0.3-4ubuntu1-0.0.15`, `8.0.3-4ubuntu1`](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/blob/8.0.3-4ubuntu1-0.0.15/Dockerfile)
+-	[`8.0.3-4ubuntu2.7-0.0.7`, `8.0.3-4ubuntu2.7`](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/blob/8.0.3-4ubuntu2.7-0.0.7/Dockerfile)
 
 # Quick reference (cont.)
 
