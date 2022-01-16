@@ -1,4 +1,4 @@
-# Docker Images for PHP-FPM on Ubuntu 20.04 (Focal Fossa)
+# Docker Images for PHP-FPM on Ubuntu 21.10 (Focal Fossa)
 
 **Maintained by: [raasss](https://github.com/raasss/)**
 

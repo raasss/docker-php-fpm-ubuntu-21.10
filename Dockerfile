@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:21.10
 
 RUN set -e; \
     export DEBIAN_FRONTEND=noninteractive; \
