@@ -1,0 +1,39 @@
+version: '3.7'
+
+networks:
+  private:
+    driver: bridge
+
+
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    networks:
+      - private
+    ports:
+      - "9000"
+    volumes:
+      - type: bind
+        source: ./htdocs
+        target: /var/www/html
+    cap_add:
+      - SYS_PTRACE
+    # environment:
+    #   - PHP_FPM_INI_1=PHP:memory_limit:141M
+
+  apache:
+    image: raasss/apache-ubuntu-21.10:latest
+    networks:
+      - private
+    ports:
+      - "80"
+      - "443"
+    environment:
+     - PHP_FPM_SERVER=php-fpm
+    volumes:
+      - type: bind
+        source: ./htdocs
+        target: /var/www/html
+        read_only: true
