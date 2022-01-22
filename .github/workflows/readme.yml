@@ -1,0 +1,35 @@
+name: Push README
+
+on:
+  push:
+    branches:
+      - 'main'
+    paths:
+      - 'README.repository.md'
+
+jobs:
+  PushContainerReadme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: git checkout
+        uses: actions/checkout@v2
+
+      - name: push README to Dockerhub
+        uses: christian-korneck/update-container-description-action@v1
+        env:
+          DOCKER_USER: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASS: ${{ secrets.DOCKER_PASSWORD }}
+        with:
+          destination_container_repo: raasss/php-fpm-ubuntu-21.10
+          provider: dockerhub
+          short_description: 'Docker Image for PHP-FPM on Ubuntu 21.10 (Impish Idri)'
+          readme_file: 'README.repository.md'
+
+      - name: push README to Quay.io
+        uses: christian-korneck/update-container-description-action@v1
+        env:
+          DOCKER_APIKEY: ${{ secrets.QUAY_ACCESS_TOKEN }}
+        with:
+          destination_container_repo: quay.io/raasss/php-fpm-ubuntu-21.10
+          provider: quay
+          readme_file: 'README.repository.md'
