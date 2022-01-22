@@ -1,12 +1,10 @@
-# Docker Images for PHP-FPM on Ubuntu 21.10 (Focal Fossa)
+# Docker Image for PHP-FPM on Ubuntu 21.10 (Impish Idri)
 
 **Maintained by: [raasss](https://github.com/raasss/)**
 
-## FAQ
-
 ### How do I use this docker image?
 
-See [the Docker Hub page](https://hub.docker.com/repository/docker/raasss/php-fpm-ubuntu-21.10/general) for the full README on how to use this container image.
+See [the Docker Hub page](https://hub.docker.com/repository/docker/raasss/php-fpm-ubuntu-21.10/general) or [GitHub page](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/blob/main/README.docker.io.md) for the full README on how to use this container image.
 
 ## Reporting a Bug / Feature Request
 
@@ -65,6 +63,3 @@ To change the documentation, please contribute a [pull request](https://github.c
 | Docker Library Official Images CI Status (released changes) |
 |:-:|
 | [![latest](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/latest.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/latest.yml) |
-| [![8.0.3-4ubuntu1](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu1.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu1.yml) |
-| [![8.0.3-4ubuntu2.7](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu2.7.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu2.7.yml) |
-| [![8.0.3-4ubuntu2.8](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu2.8.yml/badge.svg)](https://github.com/raasss/docker-php-fpm-ubuntu-21.10/actions/workflows/8.0.3-4ubuntu2.8.yml) |
